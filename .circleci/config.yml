@@ -7,6 +7,10 @@ orbs:
 workflows:
   sample:
     jobs:
+      steps:
+        - run: npm install --save-dev jest
+        - run: npm i @testing-library/jest-dom
+        - run: npm i @testing-library/dom
       - node/test:
           version: '14.17.5'
           # This is the node version to use for the `cimg/node` tag

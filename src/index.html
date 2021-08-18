@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <meta charset='UTF-8'>
+  <head>
+    <title>Nick's Button App</title>
+    <style>
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      body {
+        background-color: #191414;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <button id="clickButton">Click Me!!</button>
+        <iframe id="player" style="display: none" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" data-autoplay title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <script>
+            document.getElementById('clickButton').onclick = function() {playVideo()};
+            
+            function playVideo() {
+                document.getElementById('clickButton').innerHTML = "I'm so sorry.";
+                document.getElementById('player').style.display = 'block';
+            }
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

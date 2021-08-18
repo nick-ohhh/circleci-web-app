@@ -1,0 +1,28 @@
+{
+  "name": "circleci-web-app",
+  "version": "1.0.0",
+  "description": "A simple web app for circleci's tech challenge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nokeefe/circleci-web-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nokeefe/circleci-web-app/issues"
+  },
+  "homepage": "https://github.com/nokeefe/circleci-web-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-jest": "^27.0.6"
+  },
+  "dependencies": {
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1"
+  }
+}

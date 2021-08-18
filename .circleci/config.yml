@@ -8,11 +8,13 @@ workflows:
   sample:
     jobs:
       steps:
+        - run: npm install --global yarn
+        - run: yarn add --dev babel-jest @babel/core @babel/preset-env
         - run: npm install --save-dev jest
         - run: npm i @testing-library/jest-dom
         - run: npm i @testing-library/dom
-      - node/test:
-          version: '14.17.5'
+        - node/test:
+            version: '14.17.5'
           # This is the node version to use for the `cimg/node` tag
           # Relevant tags can be found on the CircleCI Developer Hub
           # https://circleci.com/developer/images/image/cimg/node

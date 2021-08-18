@@ -40,4 +40,4 @@ jobs:
               sudo npm i @testing-library/dom
       - run:
           name: test
-          command: jest
+          command: npm test

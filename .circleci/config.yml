@@ -5,6 +5,11 @@ orbs:
   node: circleci/node@4.7.0
   heroku: circleci/heroku@1.2.6
 jobs:
+  get-pipeline-values:
+    machine: true
+    resource_class: nokeefe/small-container
+    steps:
+      - run: echo "This is a command executed by Runner"
   build:
     working_directory: ~/circleci-web-app
     docker:
@@ -48,11 +53,12 @@ jobs:
 workflows:
   heroku_deploy:
     jobs:
-      - build
-      - heroku/deploy-via-git:
-          requires:
-            - build
+      - get-pipeline-values
+      # - build
+      # - heroku/deploy-via-git:
+      #     requires:
+      #       - build
 
-          filters:
-            branches:
-              only: main
+      #     filters:
+      #       branches:
+      #         only: main
